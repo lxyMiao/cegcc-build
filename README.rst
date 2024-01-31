@@ -1,26 +1,12 @@
-This is meta-repository to build entire CeGCC toolchain.
+This is a fork of https://github.com/MaxKellermann/cegcc-build to build a CeGCC 9.3.0 toolchain.
+Unlike Max Kellermann's repo, this one targets x86 Windows CE devices.
 
 Clone this repository using::
 
- git clone git://github.com/MaxKellermann/cegcc-build
+ git clone git://github.com/enlyze/cegcc-build
 
 To build::
 
  cd cegcc-build
  git submodule update --init
- mkdir /tmp/cegcc-output
- cd /tmp/cegcc-output
- $OLDPWD/build.sh --prefix=/where/to/install
-
-If you won't specify `--prefix`, it will install to
-``/opt/cegcc``
-
-To update afterwards::
-
- git pull
- git submodule update
- cd build
- ./build-mingw32ce.sh --prefix=/where/to/install
-
-(After update, to get 100% clean-room, you may want to rebuild
-everything from scratch.)
+ ./build_cf.sh /where/to/install

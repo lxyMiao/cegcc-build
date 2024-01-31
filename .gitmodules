@@ -1,12 +1,16 @@
 [submodule "w32api"]
 	path = w32api
-	url = ../../MaxKellermann/w32api
+	url = https://github.com/MaxKellermann/w32api
+	branch = wip
 [submodule "binutils"]
 	path = binutils
-	url = ../../MaxKellermann/binutils-gdb
+	url = https://github.com/MaxKellermann/binutils-gdb
+	branch = ce-2.34
 [submodule "gcc"]
 	path = gcc
-	url = ../../MaxKellermann/gcc
+	url = https://github.com/enlyze/gcc
+	branch = ce-9.3.0-x86
 [submodule "mingw"]
 	path = mingw
-	url = ../../MaxKellermann/mingwrt
+	url = https://github.com/MaxKellermann/mingwrt
+	branch = master
