@@ -1,6 +1,6 @@
 [submodule "w32api"]
 	path = w32api
-	url = https://github.com/MaxKellermann/w32api
+	url = https://github.com/enlyze/w32api
 	branch = wip
 [submodule "binutils"]
 	path = binutils
