@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Builds a Binutils & GCC toolchain for Windows CE x86 software development.
+# Builds a Binutils & GCC toolchain for Windows CE software development.
 #
 # Usage:
 #   ./build_cf.sh PREFIX_DIRECTORY
@@ -14,10 +14,19 @@
 
 set -eu
 
+if [[ $# -ne 2 ]]; then
+    echo "Usage: ./build_cf.sh PREFIXDIR TARGET"
+    echo
+    echo "Supported targets are":
+    echo "  - arm-mingw32ce"
+    echo "  - i386-mingw32ce"
+    exit 1
+fi
+
 J="-j `nproc`"
 OLDPATH="$PATH"
 PREFIXDIR="$1"
-TARGET="i386-mingw32ce"
+TARGET="$2"
 
 rm -rf ${PREFIXDIR}
 mkdir ${PREFIXDIR}
