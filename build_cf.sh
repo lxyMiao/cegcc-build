@@ -66,13 +66,18 @@ echo "##################################"
 echo "# INITIAL GCC                    #"
 echo "##################################"
 
+ADDITIONAL_GCC_PARAMETERS=""
+if [[ "$TARGET" = "arm-mingw32ce" ]]; then
+       ADDITIONAL_GCC_PARAMETERS+="--disable-__cxa_atexit"
+fi
+
 rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="ENLYZE" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
-    --enable-threads=win32
+    --enable-threads=win32 ${ADDITIONAL_GCC_PARAMETERS}
 
 # Only build and install GCC so far to let us build low-level CE binaries.
 make $J all-gcc
