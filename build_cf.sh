@@ -74,6 +74,7 @@ fi
 rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
+../gcc/contrib/download_prerequisites
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="ENLYZE" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
