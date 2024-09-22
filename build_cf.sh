@@ -77,7 +77,7 @@ cd gcc-build
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
-    --enable-threads=win32 ${ADDITIONAL_GCC_PARAMETERS}
+    --disable-threads ${ADDITIONAL_GCC_PARAMETERS}
 
 # Only build and install GCC so far to let us build low-level CE binaries.
 make $J all-gcc
