@@ -54,7 +54,7 @@ echo "##################################"
 rm -rf binutils-build
 mkdir binutils-build
 cd binutils-build
-../binutils/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="ENLYZE" \
+../binutils/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
     --disable-multilib --disable-werror --enable-lto --enable-plugins \
     --with-zlib=yes --disable-nls --disable-unit-tests --disable-shared
 make $J
@@ -74,7 +74,7 @@ fi
 rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
-../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="ENLYZE" \
+../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
     --enable-threads=win32 ${ADDITIONAL_GCC_PARAMETERS}
