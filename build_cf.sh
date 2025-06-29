@@ -74,6 +74,7 @@ fi
 rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
+../contrib/download_prerequisites
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
