@@ -39,6 +39,7 @@ mkdir ${PREFIXDIR}
 # "winsup/mingw/include" and "winsup/w32api/include" are added to the include path when
 # building target components.
 cd gcc
+./contrib/download_prerequisites
 rm -rf winsup
 mkdir winsup
 cd winsup
@@ -74,7 +75,6 @@ fi
 rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
-../contrib/download_prerequisites
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
     --enable-languages=c,c++ --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
