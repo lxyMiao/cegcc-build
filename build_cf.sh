@@ -39,7 +39,7 @@ mkdir ${PREFIXDIR}
 # "winsup/mingw/include" and "winsup/w32api/include" are added to the include path when
 # building target components.
 cd gcc
-./contrib/download_prerequisites
+sudo apt install libgmp-dev libmpfr-dev libmpc-dev -y
 rm -rf winsup
 mkdir winsup
 cd winsup
