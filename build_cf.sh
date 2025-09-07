@@ -76,7 +76,7 @@ rm -rf gcc-build
 mkdir gcc-build
 cd gcc-build
 ../gcc/configure --prefix="${PREFIXDIR}" --target="${TARGET}" --with-pkgversion="salman-javed-nz" \
-    --enable-languages=c,c++,jit --enable-host-shared --disable-shared --disable-multilib --disable-nls \
+    --enable-languages=c,c++,go --disable-shared --disable-multilib --disable-nls \
     --disable-werror --disable-win32-registry --disable-libstdcxx-verbose \
     --disable-threads ${ADDITIONAL_GCC_PARAMETERS}
 
